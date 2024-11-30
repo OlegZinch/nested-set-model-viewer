@@ -18,43 +18,37 @@ const Board: FC = () => {
     })
   }, [])
 
-  return (
-    <>
-      {loading ? (
-        <p className={Styles.loading}>Loading...</p>
-      ) : (
-        <div className={Styles.board}>
-          <div className={Styles.column}>
-            <h2>Nested Set Tree</h2>
-            {treeData.length > 0 && !loading && (
-              <ul>
-                {treeData.map((node) => (
-                  <TreeNode
-                    key={node.id}
-                    node={node}
-                    onSelect={setSelectedNode}
-                  />
-                ))}
-              </ul>
-            )}
-            <div>
-              {treeData.length === 0 && !loading && <p>No data available</p>}
-            </div>
-          </div>
+  if (loading) {
+    return <p className={Styles.loading}>Loading...</p>
+  }
 
-          <div className={Styles.column}>
-            <h2>Selected Node</h2>
-            <div className={Styles.result}>
-              {selectedNode ? (
-                <pre>{JSON.stringify(selectedNode, null, 2)}</pre>
-              ) : (
-                <p className={Styles.noselected}>No node selected</p>
-              )}
-            </div>
-          </div>
+  return (
+    <div className={Styles.board}>
+      <div className={Styles.column}>
+        <h2>Nested Set Tree</h2>
+        {treeData.length > 0 && !loading && (
+          <ul>
+            {treeData.map((node) => (
+              <TreeNode key={node.id} node={node} onSelect={setSelectedNode} />
+            ))}
+          </ul>
+        )}
+        <div>
+          {treeData.length === 0 && !loading && <p>No data available</p>}
         </div>
-      )}
-    </>
+      </div>
+
+      <div className={Styles.column}>
+        <h2>Selected Node</h2>
+        <div className={Styles.result}>
+          {selectedNode ? (
+            <pre>{JSON.stringify(selectedNode, null, 2)}</pre>
+          ) : (
+            <p className={Styles.noselected}>No node selected</p>
+          )}
+        </div>
+      </div>
+    </div>
   )
 }
 
