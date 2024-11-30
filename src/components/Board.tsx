@@ -42,7 +42,12 @@ const Board: FC = () => {
         <h2>Selected Node</h2>
         <div className={Styles.result}>
           {selectedNode ? (
-            <pre>{JSON.stringify(selectedNode, null, 2)}</pre>
+            <>
+              <h3>
+                {selectedNode.type}&nbsp;(ID: {selectedNode.id})
+              </h3>
+              <pre>{JSON.stringify(selectedNode, null, 2)}</pre>
+            </>
           ) : (
             <p className={Styles.noselected}>No node selected</p>
           )}

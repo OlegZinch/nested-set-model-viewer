@@ -13,6 +13,7 @@
 .board h2 {
   font-size: 1.6rem;
   margin-bottom: 1rem;
+  text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.8);
 }
 
 .column {
@@ -25,6 +26,16 @@
 
 .result {
   font-size: 1.3rem;
+}
+
+.result h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.8);
+}
+
+.result pre {
+  text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.4);
 }
 
 .loading {
