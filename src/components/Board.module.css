@@ -1,0 +1,50 @@
+.board {
+  border: 1px solid #000;
+  background-color: #454545;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  min-height: 80vh;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 1.6rem;
+}
+
+.board h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.column {
+  flex-grow: 1;
+
+  border: 1px solid #000;
+  border-radius: 0.4rem;
+  padding: 1rem;
+}
+
+.result {
+  font-size: 1.3rem;
+}
+
+.loading {
+  padding: 2rem;
+  text-align: center;
+}
+
+.noselected {
+  text-align: center;
+  animation: swing 1.8s ease-in-out infinite;
+}
+
+@keyframes swing {
+  0% {
+    color: #e9e9e9;
+  }
+  50% {
+    color: #f97204;
+  }
+  100% {
+    color: #e9e9e9;
+  }
+}
