@@ -1,6 +1,7 @@
+import { type FC } from 'react'
 import Board from './components/Board'
 
-function App() {
+const App: FC = () => {
   return (
     <div className='container'>
       <header>

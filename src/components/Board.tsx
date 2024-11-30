@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, type FC } from 'react'
 
 import TreeNode from './TreeNode'
 
@@ -6,7 +6,7 @@ import { getTree, type INode } from '../utils/tree'
 
 import Styles from './Board.module.css'
 
-const Board = () => {
+const Board: FC = () => {
   const [loading, setLoading] = useState(true)
   const [selectedNode, setSelectedNode] = useState<INode>()
   const [treeData, setTreeData] = useState<INode[]>([])

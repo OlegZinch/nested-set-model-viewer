@@ -1,50 +1,104 @@
-# React + TypeScript + Vite
+# Nested Set Model Viewer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React.js application built with Vite and TypeScript for visualizing and interacting with hierarchical data represented using the Nested Set Model. The application allows users to view the nested structure and select individual nodes to display their details.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Display Nested Set Data**: Visualize hierarchical data using a tree structure.
+- **Node Interaction**: Select a node to view its details.
+- **TypeScript Support**: Ensures type safety and improved developer experience.
+- **Fast Development**: Built with Vite for blazing-fast builds and hot module replacement.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## Prerequisites
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Before setting up the application, ensure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (version 14 or higher)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) (for package management)
+
+---
+
+## Setup Instructions
+
+1. **Clone the Repository**:
+   ```bash
+   git clone <repository-url>
+   cd <repository-directory>
+   ```
+2. **Install Dependencies: Using npm:**
+
+   ```bash
+   npm install
+   ```
+
+   **Or using yarn:**
+
+   ```bash
+   yarn install
+   ```
+
+3. **Start the Development Server: Using npm:**
+
+   ```bash
+   npm run dev
+   ```
+
+   **Or using yarn:**
+
+   ```bash
+   yarn dev
+   ```
+
+4. **Open the Application: After running the development server, the application will be accessible at:**
+
+   ```arduino
+   http://localhost:5173
+   ```
+
+---
+
+## Build for Production
+
+**To create a production build of the application:**
+
+**Using npm:**
+
+```bash
+npm run build
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+**Or using yarn:**
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+```bash
+yarn build
+```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+**The built files will be located in the dist folder.**
+
+---
+
+## Testing the Production Build
+
+**To preview the production build locally:**
+
+**Using npm:**
+
+```bash
+npm run preview
+```
+
+**Or using yarn:**
+
+```bash
+yarn preview
+```
+
+**Open the Application: After running the server, the application will be accessible at:**
+
+```arduino
+http://localhost:4173
 ```
